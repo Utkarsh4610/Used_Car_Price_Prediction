@@ -118,36 +118,37 @@ ALREADY KNOW PRICE OF YOUR CAR? GET RECOMMENDATIONS BASED ON YOUR PRICE.
         RECOMMEND
         </a>
 </div>
+ </div>
+ <div class="container">
+ <div class="collapse" id="reccol">
 
-   
-<div class="collapse" id="reccol">
+        <form action="{{ url_for('recommend')}}" method="post">
+                  <label for="Location">Location<span>*</span></label>
 
-              <form action="{{ url_for('recommend')}}" method="post">
-                        <label for="Location">Location<span>*</span></label>
+                  <select name="Locc" id="inputState" class="form-control" required>
+                          <option selected value="">Choose a Location</option>
+                          <option value="0">Ahmedabad</option>
+                          <option value="1">Bangalore</option>
+                          <option value="2">Chennai</option>
+                          <option value="3">Coimbatore</option>
+                          <option value="4">Delhi</option>
+                          <option value="5">Hyderabad</option>
+                          <option value="6">Jaipur</option>
+                          <option value="7">Kochi</option>
+                          <option value="8">Kolkata</option>
+                          <option value="9">Mumbai</option>
+                          <option value="10">Pune</option>
+                        </select>
+     
+                         
+                  <label for="Known Price"><span>Required*</span></label>
+                  <input class="form-control" name="Knpr" type="number" step="any" placeholder="Price in Lakhs" required min="1" oninput="validity.valid||(value='');" onkeydown="javascript: return event.keyCode == 69 ? false : true">
+                  <input type="submit" value="SUBMIT" id="bt">
+          </form>
+  </div>
+</div>
 
-                        <select name="Locc" id="inputState" class="form-control" required>
-                                <option selected value="">Choose a Location</option>
-                                <option value="0">Ahmedabad</option>
-                                <option value="1">Bangalore</option>
-                                <option value="2">Chennai</option>
-                                <option value="3">Coimbatore</option>
-                                <option value="4">Delhi</option>
-                                <option value="5">Hyderabad</option>
-                                <option value="6">Jaipur</option>
-                                <option value="7">Kochi</option>
-                                <option value="8">Kolkata</option>
-                                <option value="9">Mumbai</option>
-                                <option value="10">Pune</option>
-                              </select>
-           
-                               
-                        <label for="Known Price"><span>Required*</span></label>
-                        <input class="form-control" name="Knpr" type="number" step="any" placeholder="Price in Lakhs" required min="1" oninput="validity.valid||(value='');" onkeydown="javascript: return event.keyCode == 69 ? false : true">
-                        <input type="submit" value="SUBMIT" id="bt">
-                </form>
-        </div>
 
-            </div>
           </div>
         </div>
       </div>
@@ -386,7 +387,7 @@ if(ele.addEventListener){
 }
     
     </script> -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </body>
