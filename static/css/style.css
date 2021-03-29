@@ -15,52 +15,37 @@ body{
     float: left;
 }
 .top-cont{
-    padding-bottom: 3rem;
-    background-color: #f2b79f;
+    background-image: url("../banner.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-clip: border-box;
+    min-height: 80vh;
 }
 .top-left{
-    background-color:  #f2b79f;
     text-align: center;
+    padding: 7rem;
 }
+@media only screen and (max-width: 600px) {
+    .top-left{
+        text-align: center;
+        padding: 2rem;
+    }
+    .top-cont{
+        background-position: left;}
+  }
+
 .top-left img{
     height: 200;
 }
 .top-right{
-    background-color:  #f2b79f;
     padding: 2rem;
 }
 /* #f2b79f
 font-family: 'Alfa Slab One', cursive;
 font-family: 'Cantarell', sans-serif;
 */
-svg {
-    width: 100%;
-    height: 100%;
-    background-color: #f2b79f;
 
-  }
-  
-  svg path {
-    fill: #f2b79f;
-  }
-  
-  svg rect {
-    fill: #fff;
-  }
-  
-  .pth {
-    --divider-height: 8rem;
-    position: relative;
-    margin-top: -2px;
-    /* top: calc( var(--divider-height)/2 * -1 ); */
-  background-color: #f2b79f;
-    height: var(--divider-height);
-    width: 100%;  
-    float: left; 
-    z-index: -1;
-    
-  /*   outline: 1px solid red; */
-  } 
 .right-content{
     transform: translate(0,60%);
     font-weight: 500;
@@ -80,7 +65,7 @@ svg {
     text-align: center;
     font-family: 'Alfa Slab One', cursive;
     font-size: 2rem;
-    margin-top: 10rem;
+    margin-top: 5rem;
     margin-bottom: 2rem;
 }
 .grey-col{
