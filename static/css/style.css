@@ -1,0 +1,333 @@
+html {
+    scroll-behavior: smooth;
+
+  }
+body{
+    margin: 0;
+    padding: 0;
+}
+.top-nav{
+    z-index: 10;
+    position: absolute;
+    padding: 2rem;
+}
+.top-nav img{
+    float: left;
+}
+.top-cont{
+    padding-bottom: 3rem;
+    background-color: #f2b79f;
+}
+.top-left{
+    background-color:  #f2b79f;
+    text-align: center;
+}
+.top-left img{
+    height: 200;
+}
+.top-right{
+    background-color:  #f2b79f;
+    padding: 2rem;
+}
+/* #f2b79f
+font-family: 'Alfa Slab One', cursive;
+font-family: 'Cantarell', sans-serif;
+*/
+svg {
+    width: 100%;
+    height: 100%;
+    background-color: #f2b79f;
+
+  }
+  
+  svg path {
+    fill: #f2b79f;
+  }
+  
+  svg rect {
+    fill: #fff;
+  }
+  
+  .pth {
+    --divider-height: 8rem;
+    position: relative;
+    margin-top: -2px;
+    /* top: calc( var(--divider-height)/2 * -1 ); */
+  background-color: #f2b79f;
+    height: var(--divider-height);
+    width: 100%;  
+    float: left; 
+    z-index: -1;
+    
+  /*   outline: 1px solid red; */
+  } 
+.right-content{
+    transform: translate(0,60%);
+    font-weight: 500;
+
+}
+
+.right-content h1{
+    font-family: 'Alfa Slab One', cursive;
+}
+
+.right-content button{
+    padding: .5rem 1.5rem;
+    font-weight: 500;
+}
+
+.mid-text{
+    text-align: center;
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 2rem;
+    margin-top: 10rem;
+    margin-bottom: 2rem;
+}
+.grey-col{
+    background-color: #f2f2f2;
+    /* background: url('bg_purple.png'); */
+
+    clip-path: polygon(0 6%, 100% 0, 100% 94%, 0% 100%);
+
+}
+.mid-text1{
+    text-align: center;
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 2rem;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    margin-bottom: 2rem;
+}
+.mid-left{
+     display: flex;
+    justify-content: center; 
+    align-items: center; 
+    padding: 1rem 10rem;
+    font-weight: 500;
+
+}
+.mid-right{
+    padding: 5rem;
+
+}
+.internal-cont{
+    text-align: justify;
+}
+
+.mid2-left{
+    padding: 5rem;
+
+}
+.mid2-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 10rem;
+    font-weight: 500;
+
+}
+.mid2-right .internal-cont p span{
+    font-size: 2rem;
+}
+.gre{
+    overflow: hidden;
+    overflow-y: hidden !important;
+
+}
+.cen{
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+    overflow: hidden;
+    clip-path: polygon(0 6%, 100% 0, 100% 94%, 0% 100%);
+    background: linear-gradient(to right, rgb(73, 155, 238) , rgb(67, 159, 250));
+    margin-left: -1px;
+}
+.cen p{
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+.cen img{
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+.cen span{
+    background-color: greenyellow;
+    border-radius: 5px;
+    padding: 2px;
+}
+.lo{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+.lo img{
+    padding: 1rem;
+    max-width: 10;
+}
+.main-form{
+    clip-path: polygon(0 6%, 100% 0, 100% 100%, 0% 100%);
+    padding: 2rem 10rem;
+    margin-top: 30px;
+    background-image: linear-gradient(to right, #fbc2ebd0 , #75aaf8ce ),url("car5.gif");
+    background-attachment: fixed;
+    background-position: right;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.main-form .row{
+ margin-bottom: 2rem;
+}
+label{
+    font-weight: 500;
+}
+
+.sub .btn{
+    font-weight: 500;
+}
+.main-form span{
+    color: #e63600;
+}
+
+
+  .bot {
+    --divider-height: 8rem;
+    position: relative;
+    /* top: calc( var(--divider-height)/2 * -1 ); */
+  background-color: #f2b79f;
+    height: var(--divider-height);
+    width: 100%;
+      /* alternatively, could get rid of the rect, and move the svg container further down */
+  
+    float: left; 
+    z-index: -1;
+    
+  /*   outline: 1px solid red; */
+  }
+  .rec_col{
+      display: flex;
+      justify-content:space-evenly;
+      align-items: center;
+  }
+  
+  .footer{
+      background-color: #292929;
+      padding: 2rem;
+      color: #eeeeee;
+      text-align: center;
+      font-weight: 500;
+  }
+  .cc{
+      overflow:  hidden !important;
+  }
+  input[type=submit]{
+    background-color: #0b96c0;
+    border: 1px solid #0b96c0;
+    color: #f9fbfc;
+    font-weight: 500;
+    padding: 8px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: 0.3s;
+
+  }
+  input[type=submit]:hover{
+      color: #c4c6c7;
+      background-color: #05789b;
+  }
+
+/* MEDIA QUERY */
+@media only screen and (max-width: 1200px) {
+    .right-content{
+        /* transform: translate(0,30%); */
+        font-weight: 400;
+        padding-bottom: 3rem;
+    
+    }
+}
+@media only screen and (max-width: 1080px) {
+    .right-content{
+        transform: translate(0,0);
+        font-weight: 400;
+        padding-bottom: 3rem;
+    
+    }
+    .right-content h1{
+        font-size: 2rem;
+    }
+    .mid-left{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 1rem;
+        font-weight: 500;
+    
+    }
+    .mid2-right{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 3rem;
+        font-weight: 500;
+        overflow: hidden;
+
+    
+    }
+    .mid2-right .internal-cont p span{
+        font-size: 1.5rem;
+    }
+    .grey-col{
+        background-color: #f2f2f2;
+        clip-path: polygon(0 4%, 100% 0, 100% 96%, 0% 100%);
+    
+    }
+
+  }
+  @media only screen and (max-width: 768px) {
+    .mid-text{
+        font-size: 1.5rem;
+    }
+    .mid-text1{
+        font-size: 1.5rem;
+    }
+    .top-cont{
+        padding-bottom: 0;
+    }
+    .top-right{
+        padding: 1rem;
+    }
+    .mid2-right{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 1.5rem;
+        padding-top: 0;
+        font-weight: 500;
+    
+    }
+    .mid-text1{
+        margin-top: 0;
+    }
+    .main-form{
+        padding: 2rem 4rem;
+    }
+    .main-form label{
+        margin-top: 10px;
+    margin-bottom: 0px;
+    }
+    .main-form .row
+    {
+        margin-top: -22px;
+    }
+    .rec_col{
+        flex-direction: column;
+    
+}

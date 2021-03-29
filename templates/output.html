@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>PREDICTED PRICE | MACHINE LEARNING</title>
+    <link href="https://fonts.googleapis.com/css?family=Rajdhani:700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/out.css') }}"> 
+
+  </head>
+  <body>
+    <div class="container-fluid">
+        <div class="row">
+        <div class="col-md-6 left">
+                <img src=" {{ url_for('static',filename='ai.gif') }}" alt="">
+        </div>
+        <div class=" right col-md-6">
+                
+                        <p>PREDICTED PRICE FOR YOUR CAR IS <br> <span>&#8377; </span><span class="counter">{{ ("%.2f" % prediction) }} Lakhs.</span></p>
+                        <hr>
+                        <h6>{{pr}}</h6>
+                        <a href="./#main-form">NEW SEARCH</a>
+        </div>
+    </div>
+    <div class="row r1">
+            <div class="col-md-6">
+                    <p> Wanna own your car now? Get loan <a href="https://www.icicibank.com/Personal-Banking/loans/car-loan/index.page?" target="_blank"> Click here</a> </p>
+    
+            </div>
+            <div class="col-md-6">
+                    <p> Get your Car Insured <a href="https://www.icicibank.com/Personal-Banking/insurance/general-insurance/car-insurance.page" target="_blank">Click here</a></p>
+    
+            </div>
+        </div>
+    </div>
+    
+    <div class="mid-text1">OTHER CARS IN YOUR PRICE RANGE</div>
+    <div class="container-fluid">
+            <div class="row">
+                    {%for i in range(0, 20)%} 
+        
+                    <div class="a col-md-3">
+                            <div class="cont">
+                                <img src="../static/{{rec_arr_dir[i].Brand}}.png" height="80px" max-width="90%" alt="">
+                                <div class="br">
+                                   <h4>{{rec_arr_dir[i].Brand}} <span> {{rec_arr_dir[i].Model }}</span></h4>
+                                   <h5>PRICE : &#8377; <span>{{rec_arr_dir[i].Price}}</span> LAKHS.</h5>
+                                </div>
+                                <button class="btn" type="button" data-toggle="collapse" data-target="#collapseExample{{i}}" aria-expanded="false" aria-controls="collapseExample{{i}}">More Details ></button>
+                                <div class="collapse" id="collapseExample{{i}}">
+                                    <div class="card card-body">
+                                      <p>
+                                          Year Registered : <span class="a0">{{rec_arr_dir[i].Year }}</span> <br>
+                                          Distance Driven : <span class = "a1"> {{rec_arr_dir[i].Kilometers_Driven }}</span> Kms. <br>
+                                          Transmission : <span class="a2">{{rec_arr_dir[i].Transmission}} </span> <br>
+                                          Fuel Type : <span class="a3"> {{rec_arr_dir[i].Fuel_Type }}</span> <br>
+                                          Owner Type : <span class="a4"> {{rec_arr_dir[i].Owner_Type}} </span> <br>
+                                          Mileage : <span class="a5"> {{rec_arr_dir[i].Mileage}} </span>Kmpl. <br>
+                                          Power : <span class="a6">{{rec_arr_dir[i].Power}}</span> bhp. <br>
+                                          Engine Capacity: <span class="a7"> {{rec_arr_dir[i].Engine}} </span>CC. <br>
+                                          Seats : <span class="a8"> {{rec_arr_dir[i].Seats }}</span> <br>
+                
+                                      </p>
+                                    </div>
+                                  </div>
+                                
+                            </div>
+                        </div>
+                        {% if (i+1)%4 == 0 %}
+                        </div><div class="row">
+                        {% endif %}
+                 {%endfor%}
+        
+            </div>
+    </div>
+    <div class="footer">
+                        
+            <p>MADE WITH LOVE</p>
+        </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
