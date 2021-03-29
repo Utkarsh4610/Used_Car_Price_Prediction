@@ -51,7 +51,9 @@
                                    <h4>{{rec_arr_dir[i].Brand}} <span> {{rec_arr_dir[i].Model }}</span></h4>
                                    <h5>PRICE : &#8377; <span>{{rec_arr_dir[i].Price}}</span> LAKHS.</h5>
                                 </div>
-                                <button class="btn" type="button" data-toggle="collapse" data-target="#collapseExample{{i}}" aria-expanded="false" aria-controls="collapseExample{{i}}">More Details ></button>
+                                <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample{{i}}" role="button" aria-expanded="false" aria-controls="collapseExample{{i}}">
+                                        More Details
+                                </a>
                                 <div class="collapse" id="collapseExample{{i}}">
                                     <div class="card card-body">
                                       <p>

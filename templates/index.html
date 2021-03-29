@@ -5,11 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="We are predicting the price of used cars using Machin Learning.">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}"> 
-    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One&display=swap" rel="stylesheet">
-    
-    <title>Used Car Price Prediction Applicaation</title> 
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}"> 
+        <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+        
+    <title>Used Car Price Prediction</title> 
   </head>
   <body>
     <div class="container-fluid">
@@ -23,8 +23,8 @@
                                         Do not worry, We've got you covered!
                                         The solution to this problem would be predicting the price of the car that you desire.
                                 </p>
-                                <button type="button" class="btn btn-outline-danger" onclick="window.location.href = '#main-form';">CALCULATE PRICE</button>
-                                <button type="button" class="btn btn-outline-danger" onclick="window.location.href = '#Rec';">RECOMMEND</button>
+                                <a type="button" class="btn btn-outline-danger" onclick="window.location.href = '#main-form';">CALCULATE PRICE</a>
+                                <a type="button" class="btn btn-outline-danger" onclick="window.location.href = '#Rec';">RECOMMEND</a>
                                         
                         </div>
 
@@ -78,7 +78,7 @@
                         <img src="{{ url_for('static',filename='Audi.png') }}" alt="" height="100">
                         <img src="{{ url_for('static',filename='Bentley.png') }}" alt="" height="100">
                         <img src="{{ url_for('static',filename='BMW.png') }}" alt="" height="100">
-                        <img src="{{ url_for('static',filename='Chevorlet.png') }}" alt="" height="100">
+                        <img src="{{ url_for('static',filename='Chevrolet.png') }}" alt="" height="100">
                         <img src="{{ url_for('static',filename='Datsun.png') }}" alt="" height="100">
                         <img src="{{ url_for('static',filename='Fiat.png') }}" alt="" height="100">
                         <img src="{{ url_for('static',filename='Force.png') }}" alt="" height="100">
@@ -114,12 +114,46 @@
 ALREADY KNOW PRICE OF YOUR CAR? GET RECOMMENDATIONS BASED ON YOUR PRICE.
 </div>
 <div class="col-md-5 mid2-right">
-                <button type="button" class="btn btn-outline-danger" data-toggle="modal" style="font-weight: 500;margin-bottom: 25px;"  data-target="#exampleModalCenter">
-                                RECOMMEND
-                              </button>
+        <a class="btn btn-primary" data-toggle="collapse" href="#reccol" role="button" aria-expanded="false" aria-controls="reccol">
+        RECOMMEND
+        </a>
 </div>
 
-        
+   
+<div class="collapse" id="reccol">
+
+              <form action="{{ url_for('recommend')}}" method="post">
+                        <label for="Location">Location<span>*</span></label>
+
+                        <select name="Locc" id="inputState" class="form-control" required>
+                                <option selected value="">Choose a Location</option>
+                                <option value="0">Ahmedabad</option>
+                                <option value="1">Bangalore</option>
+                                <option value="2">Chennai</option>
+                                <option value="3">Coimbatore</option>
+                                <option value="4">Delhi</option>
+                                <option value="5">Hyderabad</option>
+                                <option value="6">Jaipur</option>
+                                <option value="7">Kochi</option>
+                                <option value="8">Kolkata</option>
+                                <option value="9">Mumbai</option>
+                                <option value="10">Pune</option>
+                              </select>
+           
+                               
+                        <label for="Known Price"><span>Required*</span></label>
+                        <input class="form-control" name="Knpr" type="number" step="any" placeholder="Price in Lakhs" required min="1" oninput="validity.valid||(value='');" onkeydown="javascript: return event.keyCode == 69 ? false : true">
+                        <input type="submit" value="SUBMIT" id="bt">
+                </form>
+        </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
         
 </div>
 
@@ -323,52 +357,7 @@ ALREADY KNOW PRICE OF YOUR CAR? GET RECOMMENDATIONS BASED ON YOUR PRICE.
 
     </div>
 
-               <!-- Modal -->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLongTitle">ENTER PRICE </h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                    <div class="modal-body">
-                      ENTER THE PRICE BELOW TO GET THE RECOMMENDATION.
-                      <form action="{{ url_for('recommend')}}" method="post">
-                                <label for="Location">Location<span>*</span></label>
-
-                                <select name="Locc" id="inputState" class="form-control" required>
-                                        <option selected value="">Choose a Location</option>
-                                        <option value="0">Ahmedabad</option>
-                                        <option value="1">Bangalore</option>
-                                        <option value="2">Chennai</option>
-                                        <option value="3">Coimbatore</option>
-                                        <option value="4">Delhi</option>
-                                        <option value="5">Hyderabad</option>
-                                        <option value="6">Jaipur</option>
-                                        <option value="7">Kochi</option>
-                                        <option value="8">Kolkata</option>
-                                        <option value="9">Mumbai</option>
-                                        <option value="10">Pune</option>
-                                      </select>
-                   
-                                       
-                                <label for="Known Price"><span>Required*</span></label>
-                                <input class="form-control" name="Knpr" type="number" step="any" placeholder="Price in Lakhs" required min="1" oninput="validity.valid||(value='');" onkeydown="javascript: return event.keyCode == 69 ? false : true">
-                               </div>   
-                    <div class="modal-footer">
-                                <input type="submit" value="SUBMIT" id="bt">
-                        </form>
-
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-
-
-                  <div class="footer">
+    <div class="footer">
                         
                       <p>MADE WITH LOVE</p>
                   </div>
@@ -377,9 +366,6 @@ ALREADY KNOW PRICE OF YOUR CAR? GET RECOMMENDATIONS BASED ON YOUR PRICE.
 
     <script src="{{ url_for('static',filename='main.js') }}"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script>
     window.addEventListener( "pageshow", function ( event ) {
   var historyTraversal = event.persisted || 
@@ -400,7 +386,10 @@ if(ele.addEventListener){
 }
     
     </script> -->
-</body>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
 </html>
 
 
