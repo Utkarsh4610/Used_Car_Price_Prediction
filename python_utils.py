@@ -62,6 +62,7 @@ def call_model(_data):
     -> Mandatory fields: _location, _owner, _brand, _fuel, _year, 
     """
     _data = _data.to_dict()
+    logging.info(f"Input dict is:{_data}")
     _location = _data.get('Loc')
     _owner = _data.get('Own')
     _brand = int(_data.get('Brand'))
