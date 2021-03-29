@@ -5,9 +5,9 @@
 - XGBoost algorithm is used to make this project
 - Flask framework is used to make web server
 - Frontend is majorly based on Bootstrap and JS
-- Responsive web design.
+- Responsive web design
 - Deployed on Heroku cloud
-- Refer the ipython notebook for Model building code
+- Refer the ipython notebook for Model building code.
 
 Visit the link to access the application: <br>
 https://machineer-prediction.herokuapp.com/ <br>
