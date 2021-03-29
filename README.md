@@ -36,14 +36,14 @@ python app.py
 
 #### Application Features
 - Get the recommendation of cars for given Location and Price. <br><br>
-<img src="static/markup_images/recommend.png">
+<img src="static/markup_images/recommend.PNG">
 
 - Get the predicted price given the set of Attributes. Cool part is, no need to enter all the attributes it will be taken care by the algorithm.<br><br>
-<img src="static/markup_images/inp.png">
+<img src="static/markup_images/inp.PNG">
 - Along with the predicted price, it will also show the top 20 recommended vehicles within the price range for the given Location. Impressive right!<br><br>
-<img src="static/markup_images/pred.png">
+<img src="static/markup_images/pred.PNG">
 - Still not sure about the recommendations? No worries, take a look at more details for all suggestions.<br><br>
-<img src="static/markup_images/det.png">
+<img src="static/markup_images/det.PNG">
 <hr>
 
 Hope this will be helpful for implementing and deploying the Machine Learning models. <br>
