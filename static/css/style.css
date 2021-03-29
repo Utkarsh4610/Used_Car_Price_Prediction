@@ -28,11 +28,16 @@ body{
 }
 @media only screen and (max-width: 600px) {
     .top-left{
-        text-align: center;
         padding: 2rem;
     }
     .top-cont{
         background-position: left;}
+       .right-content p{
+            font-weight: 500;
+            font-size: 1rem;
+            line-height: 1.5;
+            text-align: justify;
+        }
   }
 
 .top-left img{
@@ -131,6 +136,7 @@ font-family: 'Cantarell', sans-serif;
     background: linear-gradient(to right, rgb(73, 155, 238) , rgb(67, 159, 250));
     margin-left: -1px;
 }
+
 .cen p{
     font-weight: 500;
     font-size: 1.5rem;
