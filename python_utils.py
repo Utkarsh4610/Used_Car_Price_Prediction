@@ -120,7 +120,11 @@ def call_model(_data):
         with_model_arr = [_location, _year, _distance, _fuel, _transmission, _owner, _mileage, _capacity, _power, _seat, _brand, _model]
         logging.info("Model Name is passed. Calling the model with model attribute.")
         msg = "To get more accurate result try giving more precise parameters."
-        pred_price = process_with_model(with_model_arr)
+        if _model is None:
+            logging.info("Unable to fetch Model Name. Fallback to without model.")
+            pred_price = process_without_model(with_model_arr[:-1])
+        else:
+            pred_price = process_with_model(with_model_arr)
     
     # Get the Recommendation from the predicted price
     rec_arr = get_rec(float(pred_price), int(_location) )
