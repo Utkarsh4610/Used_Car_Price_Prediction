@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+
+    <title>Recommended Cars</title>
+    <style>
+
+    .a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .cont{
+       box-shadow: 3px 3px 5px 6px #ccc; 
+       width: 90%;
+       padding: 1rem;
+       border-bottom-right-radius: 8px;
+       margin-bottom: 1rem;
+       background-image: url('../static/rback.png');
+       background-size: cover;
+       background-position: center;
+       background-repeat: no-repeat;
+    }
+    .card{
+        border: 0;
+    }
+    .btn{
+        padding: 0;
+        font-size: 12px;
+        font-weight: 500;
+        color: rgb(8, 87, 189);
+        margin-bottom: 1rem;
+    }
+    button:focus,button:active{
+        outline: 0 !important;
+    }
+    .cont img{
+        align-items: center;
+    }
+    .card-body {
+    padding:0.5rem;
+    background-color: rgba(221, 221, 221, 0.603);
+}
+p{
+    font-weight: 500;
+    line-height: 1.5;
+}
+h1{
+    text-align: center;
+    font-family: 'Alfa Slab One', cursive;
+    padding: 1rem;
+}
+a{
+    background-color: rgb(6, 163, 190);
+    padding: .5rem;
+    color: #fff;
+    text-decoration: none;
+    bottom: 20px;
+    right: 20px;
+    position: fixed;
+    font-weight: 500;
+    border-radius: 8px;
+}
+a:hover{
+    text-decoration: none;
+    color: rgb(34, 22, 206);
+    transition: .2s;
+}
+  
+.footer{
+      background-color: #292929;
+      padding: 2rem;
+      color: #eeeeee;
+      text-align: center;
+      font-weight: 500;
+      margin-top: 1rem;
+  }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+        <h1>RECOMMENDED CARS</h1>
+            <div class="row">
+                    {%for i in range(0, 20)%} 
+  
+                    <div class="a col-md-3">
+                            <div class="cont">
+                                    <img src="../static/{{rec_arr_dir[i].Brand}}.png" height="80px" max-width="90%" alt="">
+                                    <div class="br">
+                                       <h4>{{rec_arr_dir[i].Brand}} <span> {{rec_arr_dir[i].Model }}</span></h4>
+                                       <h5>PRICE : &#8377; <span>{{rec_arr_dir[i].Price}}</span> LAKHS.</h5>
+                                    </div>
+                                    <button class="btn" type="button" data-toggle="collapse" data-target="#collapseExample{{i}}" aria-expanded="false" aria-controls="collapseExample{{i}}">More Details ></button>
+                                    <div class="collapse" id="collapseExample{{i}}">
+                                        <div class="card card-body">
+                                          <p>
+                                              Year Registered : <span class="a0">{{rec_arr_dir[i].Year }}</span> <br>
+                                              Distance Driven : <span class = "a1"> {{rec_arr_dir[i].Kilometers_Driven }}</span> Kms. <br>
+                                              Transmission : <span class="a2">{{rec_arr_dir[i].Transmission}} </span> <br>
+                                              Fuel Type : <span class="a3"> {{rec_arr_dir[i].Fuel_Type }}</span> <br>
+                                              Owner Type : <span class="a4"> {{rec_arr_dir[i].Owner_Type}} </span> <br>
+                                              Mileage : <span class="a5"> {{rec_arr_dir[i].Mileage}} </span>Kmpl. <br>
+                                              Power : <span class="a6">{{rec_arr_dir[i].Power}}</span> bhp. <br>
+                                              Engine Capacity: <span class="a7"> {{rec_arr_dir[i].Engine}} </span>CC. <br>
+                                              Seats : <span class="a8"> {{rec_arr_dir[i].Seats }}</span> <br>
+                    
+                                          </p>
+                                        </div>
+                                      </div>
+                                    
+                                </div>
+                        </div>
+                       
+                        {% if (i+1)%4 == 0 %}
+                        </div><div class="row">
+                        {% endif %}
+                 {%endfor%}
+
+            </div>
+            <a href="./#Rec">NEW SEARCH</a>
+
+        </div>
+        <div class="footer">
+                        
+                <p>MADE WITH LOVE</p>
+            </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

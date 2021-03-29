@@ -1,0 +1,112 @@
+
+ .a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cont{
+   box-shadow: 3px 3px 5px 6px #ccc; 
+   width: 90%;
+   padding: 1rem;
+   border-bottom-right-radius: 8px;
+   margin-bottom: 1rem;
+   background-image: url('../static/rback.png');
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat; 
+}
+.card{
+    border: 0;
+}
+.btn{
+    padding: 0;
+    font-size: 12px;
+    font-weight: 500;
+    color: rgb(8, 87, 189);
+    margin-bottom: 1rem;
+}
+button:focus,button:active{
+    outline: 0 !important;
+}
+.cont img{
+    align-items: center;
+}
+.card-body {
+padding:0.5rem;
+background-color: rgba(221, 221, 221, 0.603);
+}
+p{
+font-weight: 500;
+line-height: 1.5;
+}
+a{
+background-color: rgb(6, 163, 190);
+padding: .5rem;
+color: #fff;
+font-family: 'Rajdhani', sans-serif;
+text-decoration: none;
+transition: .3s;
+border: 1px solid #7578cd;
+border-radius: 8px;
+}
+a:hover, a:active,a:link, a:visited {
+    background-color: #7578cd;
+    color: #fff;
+    text-decoration-line: none;
+  }
+.mid-text1{
+    text-align: center;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 2rem;
+    margin-top: 0.5rem;
+    padding-top: 1rem;
+    margin-bottom: 1rem;
+}
+.left{
+    padding: 1rem;
+    text-align: center;
+}
+.left img{
+    height: 300px;
+}
+.right{
+    padding: 1rem;
+    padding-top: 4rem;
+}
+.right p{
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.5rem;
+    line-height: 3rem;
+}
+hr{
+    width: 60%;
+    margin-left: 0;
+    margin-top: -10px;
+    margin-bottom: 5px;
+    border-top: 2px solid #5a5ece;
+}
+.right p span{
+    background-color: rgb(248, 216, 33);
+    padding: .1rem .3rem;
+    border-radius: 10px;
+    color: #1f2275;
+}
+h4,h6{
+    color: #4347af;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.r1{
+    margin-top: 3rem;
+    text-align: center;
+}
+  
+.footer{
+    background-color: #292929;
+    padding: 2rem;
+    color: #eeeeee;
+    text-align: center;
+    font-weight: 500;margin-top: 1rem;
+}
+
+

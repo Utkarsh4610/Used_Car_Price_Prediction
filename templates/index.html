@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="en">
+  <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="We are predicting the price of used cars using Machin Learning.">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}"> 
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+    
+    <title>Used Car Price Prediction</title> 
+  </head>
+  <body>
+    <div class="container-fluid">
+            <div class="row top-cont">
+                    <div class="col-md-6 top-left"> <img class="car-img" src="{{ url_for('static',filename='car2.gif') }}" alt="" width="100%"></div>
+                    <div class="col-md-6 top-right">
+                        <div class="right-content">
+                                <h1>IT'S A CAR STORY.</h1>
+                                <p>
+                                        Uncertain about the price of your car?
+                                        Do not worry, We've got you covered!
+                                        The solution to this problem would be predicting the price of the car that you desire.
+                                </p>
+                                <button type="button" class="btn btn-outline-danger" onclick="window.location.href = '#main-form';">CALCULATE PRICE</button>
+                                <button type="button" class="btn btn-outline-danger" onclick="window.location.href = '#Rec';">RECOMMEND</button>
+                                        
+                        </div>
+
+                    </div>
+            </div>
+            
+    </div>
+    <div class="pth">
+            <svg viewBox="0 70 500 60" preserveAspectRatio="none">
+              <rect x="0" y="0" width="500" height="500" style="stroke: none;" />
+              <path d="M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z" style="stroke: none;"></path>
+            </svg>
+          </div>
+    <div class="container-fluid">
+        <div class="mid-text">WHAT WE DO ?</div>
+        <div class="row">
+<div class="col-md-6 mid-left">
+<div class="internal-cont">
+    <p>  It is simple!
+            Considering the information you provide we investigate thoroughly the factors that go into pricing such as mileage, transmission power, drive type, etc.. We also look into the data collected over time and predict price trends for each of the vehicle . We've built the model in such a way that it gives highest accuracy and precision to choose the most suitable one.
+    </p>
+</div>
+</div>
+<div class="col-md-6 mid-right">
+<img src="{{ url_for('static',filename='car13.gif') }}" alt="" width="100%">
+</div>    
+        </div>
+    </div>
+    <div class="container-fluid form-container grey-col">
+            <div class="mid-text1">HOW WE CALCULATE THE PRICE</div>
+            <div class="row" >
+                    <div class="col-md-6 mid2-left">
+                            <img src="{{ url_for('static',filename='ai2.gif') }}" alt="" width="100%">
+
+                    </div>
+                    <div class="col-md-6 mid2-right">
+                    <div class="internal-cont">
+                            <p> <span>Machine Learning</span><br>To develop a predictive model, the dataset is trained and tested based on collected input and output data using contrasting machine learning algorithms. The algorithm which was deemed suitable and has reflected transcend results was further upgraded and executed. You can anticipate a precise prediction barring the fact that the customers provide accurate fields. 
+                            </p>
+                        </div>
+                    </div>
+                            </div>
+    </div>
+
+<div class="log">
+                <div class="mid-text1">OFFERED BRANDS</div>
+
+                <marquee behavior="scroll" direction="left" scrollamount="12">
+                <div class="row lo">
+                        <img src="{{ url_for('static',filename='Ambassador.png') }}" alt="" height="100">
+                        <img src="{{ url_for('static',filename='Audi.png') }}" alt="" height="100">
+                        <img src="{{ url_for('static',filename='Bentley.png') }}" alt="" height="100">
+                        <img src="{{ url_for('static',filename='BMW.png') }}" alt="" height="100">
+                        <img src="{{ url_for('static',filename='Chevorlet.png') }}" alt="" height="100">
+                        <img src="{{ url_for('static',filename='Datsun.png') }}" alt="" height="100">
+                        <img src="{{ url_for('static',filename='Fiat.png') }}" alt="" height="100">
+                        <img src="{{ url_for('static',filename='Force.png') }}" alt="" height="100">
+                        <img src="{{ url_for('static',filename='Ford.png') }}" alt="" height="100">
+                        <img src="{{ url_for('static',filename='Honda.png') }}" alt="" height="100">
+                        <img src="{{ url_for('static',filename='Hyundai.png') }}" alt="" height="100">
+                        <img src="{{ url_for('static',filename='ISUZU.png') }}" alt="" height="100">
+                        <img src="{{ url_for('static',filename='Jaguar.png') }}" alt="" height="100">
+                        <img src="{{ url_for('static',filename='Jeep.png') }}" alt="" height="100">
+                        <img src="{{ url_for('static',filename='Lamborghini.png') }}" alt="" height="100">
+                        <img src="{{ url_for('static',filename='Land-Rover.png') }}" alt="" height="100">
+                        <img src="{{ url_for('static',filename='Mahindra.png') }}" alt="" height="100">
+                        <img src="{{ url_for('static',filename='Maruti.png') }}" alt="" height="100">
+                        <img src="{{ url_for('static',filename='Mercedes-Benz.png') }}" alt="" height="100">
+                        <img src="{{ url_for('static',filename='Mini.png') }}" alt="" height="100">
+                        <img src="{{ url_for('static',filename='Mitsubishi.png') }}" alt="" height="100">
+                        <img src="{{ url_for('static',filename='Nissan.png') }}" alt="" height="100">
+                        <img src="{{ url_for('static',filename='Porsche.png') }}" alt="" height="100">
+                        <img src="{{ url_for('static',filename='Renault.png') }}" alt="" height="100">
+                        <img src="{{ url_for('static',filename='Skoda.png') }}" alt="" height="100">
+                        <img src="{{ url_for('static',filename='Tata.png') }}" alt="" height="100">
+                        <img src="{{ url_for('static',filename='Toyota.png') }}" alt="" height="100">
+                        <img src="{{ url_for('static',filename='Volkswagen.png') }}" alt="" height="100">
+                        <img src="{{ url_for('static',filename='Volvo.png') }}" alt="" height="100">
+
+                </div>
+                </marquee>
+</div>
+<div class="mid-text1" id="Rec">GET RECOMMENDATION</div>
+
+<div class="rec_col">
+<div class="col-md-5 mid-left">
+ALREADY KNOW PRICE OF YOUR CAR? GET RECOMMENDATIONS BASED ON YOUR PRICE.
+</div>
+<div class="col-md-5 mid2-right">
+                <button type="button" class="btn btn-outline-danger" data-toggle="modal" style="font-weight: 500;margin-bottom: 25px;"  data-target="#exampleModalCenter">
+                                RECOMMEND
+                              </button>
+</div>
+
+        
+        
+</div>
+
+    <div class="container-fluid main-form">
+            <div class="mid-text1"  id="main-form">PREDICT PRICE HERE</div>
+
+            <div class="form-cont">
+            <form id="needs-validation" action="{{ url_for('predict')}}" method="POST" novalidate>
+                    
+                    <div class="row">
+                        <div class="col-md-5">
+                                <label for="Location">Location<span>*</span></label>
+
+                                <select name="Loc" id="inputState" class="form-control" required>
+                                        <option selected value="">Choose a Location</option>
+                                        <option value="0">Ahmedabad</option>
+                                        <option value="1">Bangalore</option>
+                                        <option value="2">Chennai</option>
+                                        <option value="3">Coimbatore</option>
+                                        <option value="4">Delhi</option>
+                                        <option value="5">Hyderabad</option>
+                                        <option value="6">Jaipur</option>
+                                        <option value="7">Kochi</option>
+                                        <option value="8">Kolkata</option>
+                                        <option value="9">Mumbai</option>
+                                        <option value="10">Pune</option>
+                                      </select>
+                   
+                                      <div class="invalid-feedback">
+                                            Mandatory field.
+                                          </div> 
+                        </div>
+                        <div class="col-md-3">
+                                <label for="Owner Type">Owner Type <span>*</span> </label>
+
+                                <select id="inputState" name="Own" class="form-control" required>
+                                        <option selected value="">Choose Owner Type</option>
+                                        <option value="0">First</option>
+                                        <option value="2">Second</option>
+                                        <option value="3">Third</option>
+                                        <option value="1">Fourth & Above</option>
+
+                                </select>
+                                <div class="invalid-feedback">
+                                        Mandatory field.
+                                      </div> 
+                        </div>
+                        
+                        <div class="col-md-4">
+                                
+                        </div>
+                    </div>
+                    <div class="row">
+                                <div class="col-md-6">
+                                      <label for="Brand Name">Brand Name<span>*</span></label>
+          
+                                      <select name="Brand" id="brand" class="form-control" required onchange="changecat(this.value)">
+                                              <option selected value="">Choose a Brand</option>
+                                             <option value="0">Ambassador</option>
+                                             <option value="1">Audi</option>
+                                             <option value="2">BMW</option>
+                                             <option value="3">Bentley</option>
+                                             <option value="4">Chevrolet</option>
+                                             <option value="5">Datsun</option>
+                                             <option value="6">Fiat</option>
+                                             <option value="7">Force</option>
+                                             <option value="8">Ford</option>
+                                             <option value="9">Honda</option>
+                                             <option value="10">Hyundai</option>
+                                             <option value="11">ISUZU</option>
+                                             <option value="12">Jaguar</option>
+                                             <option value="13">Jeep</option>
+                                             <option value="14">Lamborghini</option>
+                                             <option value="15">Land Rover</option>
+                                             <option value="16">Mahindra</option>
+                                             <option value="17">Maruti</option>
+                                             <option value="18">Mercedes-Benz</option>
+                                             <option value="19">Mini</option>
+                                             <option value="20">Mitsubishi</option>
+                                             <option value="21">Nissan</option>
+                                             <option value="22">Porsche</option>
+                                             <option value="23">Renault</option>
+                                             <option value="24">Skoda</option>
+                                             <option value="25">Tata</option>
+                                             <option value="26">Toyota</option>
+                                             <option value="27">Volkswagen</option>
+                                             <option value="28">Volvo</option>
+                                      </select>   
+                                      <div class="invalid-feedback">
+                                              Mandatory field.
+                                            </div>    
+                                   </div>
+                                <div class="col-md-6">
+                                      <label for="Model Name">Model Name</label>
+          
+                                      <select name="Model" id="Model" name="Model" class="form-control">
+                                              <option value="ChooseaModelName" selected>Choose a Model Name</option>
+                                        </select>                      
+                                  </div>
+                              </div>
+                    <div class="row">
+                            <div class="col-md-auto">
+                                    <label for="Fuel Type">Fuel Type<span>*</span></label>
+    
+                                    <select id="inputState" name="Fuel" class="form-control" required>
+                                            <option selected value="">Choose Fuel Type</option>
+                                            <option value="3">Petrol</option>
+                                            <option value="1">Diesel</option>
+                                            <option value="0">CNG</option>
+                                            <option value="2">LPG</option>
+                                           
+                                    </select>
+                                    <div class="invalid-feedback">
+                                            Mandatory field.
+                                          </div> 
+                            </div>
+  
+                            <div class="col-md-3">
+                                        <label for="Year">Years Old<span>*</span></label>
+    
+                                        <input class="form-control " name="Year" type="number" step="any" placeholder="Age of vehicle" required min="0" oninput="validity.valid||(value='');" onkeydown="javascript: return event.keyCode == 69 ? false : true">
+                                        <div class="invalid-feedback">
+                                            Mandatory field.
+                                          </div>
+
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                                <label for="Seats">Number of Seats</label>
+
+                                <select id="inputState" name="Seats" class="form-control">
+                                        <option selected value="">Choose number of Seats</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                        Mandatory field.
+                                      </div>
+                            
+                        </div>
+
+                        <div class="col-md-3">
+                                        <label for="Transmission Type">Transmission Type</label>
+        
+                                        <select id="inputState" name="Trans" class="form-control">
+                                                <option selected  value="">Choose Transmission Type</option>
+                                                <option value="0">Automatic</option>
+                                                <option value="1">Manual</option>
+                                        </select>
+                                        <div class="invalid-feedback">
+                                                Mandatory field.
+                                              </div>
+                                </div>
+                    </div>
+                    <div class="row">
+                            <div class="col-md-3">
+                                        <label for="Distance Driven">Distance Driven</label>
+                                        <input class="form-control " name="Dist" type="number" step="any" placeholder="Distance Driven (Km)" min="1" oninput="validity.valid||(value='');" onkeydown="javascript: return event.keyCode == 69 ? false : true">
+                                        <div class="invalid-feedback">
+                                                Mandatory field.
+                                              </div>
+                                
+                                
+                                </div>
+                            <div class="col-md-3">
+                                    <label for="Mileage">Mileage</label>
+                                    <input class="form-control" name="Mil" type="number" step="any" placeholder="Mileage (Kmpl)" min="1" oninput="validity.valid||(value='');" onkeydown="javascript: return event.keyCode == 69 ? false : true">
+                                    <div class="invalid-feedback">
+                                        Mandatory field.
+                                      </div> </div>
+                            <div class="col-md-3">
+                                    <label for="Engine Capacity">Engine Capacity</label>
+                                    <input class="form-control " name="Cap" type="number" step="any" placeholder="Engine Capacity (CC)" min="1" oninput="validity.valid||(value='');" onkeydown="javascript: return event.keyCode == 69 ? false : true">
+                                    <div class="invalid-feedback">
+                                        Mandatory field.
+                                      </div></div>
+                            <div class="col-md-3">
+                                    <label for="Engine Power">Engine Power</label>
+                                    <input class="form-control " name="Pow" type="number" step="any" placeholder="Engine Power (bhp)" min="1" oninput="validity.valid||(value='');" onkeydown="javascript: return event.keyCode == 69 ? false : true">
+                                    <div class="invalid-feedback">
+                                        Mandatory field.
+                                      </div> </div>
+                    </div>
+
+                    <div class="sub">
+                                <input type="submit" value="SUBMIT" id="bt">
+                                <!-- <h4 id = "analyzing" style=" color:#3786bd"></h4> -->
+                    </div>
+                
+
+                  </form></div>
+
+    </div>
+
+               <!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLongTitle">ENTER PRICE </h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      ENTER THE PRICE BELOW TO GET THE RECOMMENDATION.
+                      <form action="{{ url_for('recommend')}}" method="post">
+                                <label for="Location">Location<span>*</span></label>
+
+                                <select name="Locc" id="inputState" class="form-control" required>
+                                        <option selected value="">Choose a Location</option>
+                                        <option value="0">Ahmedabad</option>
+                                        <option value="1">Bangalore</option>
+                                        <option value="2">Chennai</option>
+                                        <option value="3">Coimbatore</option>
+                                        <option value="4">Delhi</option>
+                                        <option value="5">Hyderabad</option>
+                                        <option value="6">Jaipur</option>
+                                        <option value="7">Kochi</option>
+                                        <option value="8">Kolkata</option>
+                                        <option value="9">Mumbai</option>
+                                        <option value="10">Pune</option>
+                                      </select>
+                   
+                                       
+                                <label for="Known Price"><span>Required*</span></label>
+                                <input class="form-control" name="Knpr" type="number" step="any" placeholder="Price in Lakhs" required min="1" oninput="validity.valid||(value='');" onkeydown="javascript: return event.keyCode == 69 ? false : true">
+                               </div>   
+                    <div class="modal-footer">
+                                <input type="submit" value="SUBMIT" id="bt">
+                        </form>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+                  <div class="footer">
+                        
+                      <p>MADE WITH LOVE</p>
+                  </div>
+    
+    <!-- Optional JavaScript -->
+
+    <script src="{{ url_for('static',filename='main.js') }}"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+    window.addEventListener( "pageshow", function ( event ) {
+  var historyTraversal = event.persisted || 
+                         ( typeof window.performance != "undefined" && 
+                              window.performance.navigation.type === 2 );
+  if ( historyTraversal ) {
+    // Handle page restore.
+    window.location.reload();
+  }
+});
+    </script>
+    <!-- <script>
+    var ele = 'id';
+if(ele.addEventListener){
+    ele.addEventListener("submit", callback, false);  //Modern browsers
+}else if(ele.attachEvent){
+    ele.attachEvent('onsubmit', callback);            //Old IE
+}
+    
+    </script> -->
+</body>
+</html>
+
+
+
+
