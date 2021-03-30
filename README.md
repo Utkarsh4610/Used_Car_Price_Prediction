@@ -1,6 +1,6 @@
 ## Used_Car_Price_Prediction
 
-#### This is a Machine Learning based project. It uses Regression techniqur to predict the price of the Used cars.
+#### This is a Machine Learning based project. It uses Regression technique to predict the price of the Used cars.
 
 - XGBoost algorithm is used to make this project
 - Flask framework is used to make web server
