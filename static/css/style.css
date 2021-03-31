@@ -20,7 +20,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-clip: border-box;
-    min-height: 80vh;
+    min-height: 100vh;
 }
 .top-left{
     text-align: center;
@@ -52,7 +52,7 @@ font-family: 'Cantarell', sans-serif;
 */
 
 .right-content{
-    transform: translate(0,60%);
+    transform: translate(0,100%);
     font-weight: 500;
 
 }
